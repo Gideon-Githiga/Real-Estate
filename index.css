@@ -566,6 +566,7 @@ display: none;
   }
   #contact {
     display: block;
+    height: auto;
   }
   .ins {
     width: 90%;
