@@ -1,0 +1,586 @@
+/* General Styles */
+:root{
+  margin: 0;
+  width: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: rgb(12, 51, 51);
+  align-items: center;
+  color: white;
+  width: auto;
+}
+
+/* Navigation Bar */
+.nav {
+  padding: 0;
+  margin-top: -10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  color: orangered;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+}
+
+.nav a {
+  text-decoration: none;
+  color: orangered;
+  padding: 10px;
+}
+.nav i{
+  display: none;
+
+}
+.sticky{
+  background-color: rgb(21, 66, 66);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.logo{
+  background-image: url('18.jpg');
+  height: 30px;
+  width: 30px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 5px;
+}
+/* Hero Section */
+#home {
+  object-fit: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation:  2s ease-in-out;
+  filter: blur(50%);
+  z-index: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Intro Section */
+.intro {
+  width: 60%;
+  z-index: 1;
+  border: 2px solid orangered;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 2px orangered;
+
+}
+#home h1{
+  color: orangered;
+  font-weight: 70px;
+  font-size: xx-large;
+}
+#home p{
+  color: rgb(245, 210, 197);
+  font-weight: 70px;
+  font-size: xx-large;
+}
+/* How Section */
+#how {
+  height: auto;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+#how h2{
+  color: orangered;
+  margin: 0px 0  60px 0;
+}
+/* Cards Section */
+.cards {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  font-size: small;
+  padding: 12px;
+  width: 150px;
+  height: 200px;
+  transition: transform 0.3s;
+  border: 2px solid orangered;
+  border-radius: 20px;
+  box-shadow: 2px 2px 10px 2px orangered;
+
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card i {
+  font-size: 30px;
+  color: orangered;
+}
+
+/* Properties Section */
+#properties {
+  height: auto;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+@keyframes turn {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-130%);
+  }
+}
+
+
+
+.slider-container {
+  overflow-x: auto;
+
+  width: auto;
+  height: 80%;
+  margin-top: 50px;
+  display: flex;
+  text-align: center;
+}
+.slider-container::-webkit-scrollbar{
+  display: none;
+}
+.slide h2,
+.slide p {
+  font-size: small;
+}
+.slide {
+  width: 50%;
+  margin: 15px;
+  border-radius: 20px;
+}
+.slide img {
+  object-fit: contain;
+  max-height: 200px;
+  border-radius: 20px;
+  border: none
+  margin: 4px;
+  x
+  
+}
+.slide::-webkit-scrollbar {
+  display: none;
+}
+
+#properties::-webkit-scrollbar {
+  display: none;
+}
+
+/* Agents Section */
+
+
+.agen {
+  text-align: left;
+  margin-left: 20px;
+}
+
+.agentholder {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  height: auto;
+justify-content: center;
+}
+
+.agents {
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.agent {
+  min-width: 30%;
+  height: 250px;
+  margin: 5px;
+  text-align: left;
+  transition: transform 0.3s;
+}
+
+.agent:hover {
+  transform: scale(1.05);
+}
+
+.agent span {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+
+.img {
+  width: 100%;
+  height: 60%;
+ 
+}
+.img img{
+  height: 150px;
+  width: 200px;
+  border-radius: 20px;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+}
+/* Marketing Section */
+#marketing {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.house {
+  width: 60%;
+  height: 80%;
+  object-fit: cover;
+}
+.house img{
+  height: 100%;
+  width: 100%;
+  border-radius: 0 20px 20px 0;
+
+}
+.text {
+  width: 40%;
+  font-size: x-large;
+  margin: 0 50px 0 50px;
+  padding: 20px;
+  text-align: left;
+}
+button{
+  background-color: orangered;
+  border: none;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 10px;
+}
+.text button {
+  background-color: orangered;
+}
+
+/* Services Section */
+#services {
+  height: auto;
+}
+
+.serve {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.serv {
+  width: 30%;
+  text-align: left;
+  margin-bottom: 10px;
+  display: flex;
+  position: relative;
+}
+
+.serv a,
+.serv i {
+  text-decoration: none;
+  color: orangered;
+}
+
+.words {
+  margin: -20px 10px 10px;
+}
+
+.words span {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+/* Testimony Section */
+.testimony {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mid {
+  width: 70%;
+}
+
+.testimony i {
+  margin: 50px;
+}
+
+/* Contacts Section */
+#contact {
+  margin-top: 40px;
+  height: 90vh;
+}
+
+.ins {
+  display: block;
+  width: 50%;
+}
+
+.ins input,
+.ins textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+}
+#inp{
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  background-color: #abaaaa;
+}
+.conhold {
+  display: flex;
+}
+
+.address {
+  width: 50%;
+  text-align: left;
+  margin: 0 50px 0 50px;
+  padding: 20px;
+}
+
+/* Footer Section */
+.footer {
+  height: auto;
+  color: #fff;
+  background-size: cover;
+  background-position: center;
+}
+
+.one {
+  display: flex;
+  height: 75%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.moja {
+  text-align: left;
+  margin: 20px;
+  width: 30%;
+}
+
+.moja a {
+  text-decoration: none;
+  margin: 0 -35px;
+  color: #fff;
+}
+
+.moja p,
+.moja a,
+.moja i {
+  color: #abaaaa;
+}
+.navlinks2{
+  display: none;
+}
+.hid{
+  display: none;
+}
+.actived.active{
+  color:wheat
+}
+@media screen and (max-width: 768px) {
+  #home{
+    height: 600px;
+  }
+  .nav{
+    width: 100%;
+  }
+  .nav i{
+    display: block;
+    margin: 20px;
+  }
+  .navlinks {
+    display: none;
+  }
+  .sticky{
+    background-color: transparent !important;
+    box-shadow: none;
+
+  }
+.navlinks2{
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  color: yellowgreen;
+  background-color: rgb(11, 60, 60);
+  opacity: 0.9;
+  height: 55vh;
+}
+  .navlinks2 a {
+    display: block;
+    margin: 10px;
+  }
+  .navlinks2 a:hover {
+    background-color: rgb(21, 66, 66);
+  }
+  .navlinks2.show {
+    display: block;
+  }
+  .navlinks2 a {
+    display: block;
+    margin: 10px;
+  }
+  .navlinks2 a:hover {
+    background-color: rgb(21, 66, 66);
+  }
+  .navlinks2.show {
+    display: block;
+  }
+  .intro {
+    width: 90%;
+    border:none;
+    box-shadow: none;
+  }
+  #how {
+    height: auto;
+    margin: 0;
+  }
+  .cards {
+    display: block;
+  }
+  .card {
+    border: none;
+    box-shadow: none;
+    width: 90%;
+    font-size: small;
+    height: auto;
+
+  }
+  .card:hover {
+    transform: none;
+  }
+  #properties {
+    height: 100%;
+    overflow: auto;
+  }
+  .slider-container {
+    width: 100%;
+  }
+  .slide {
+    width: 90%;
+  }
+
+   #agents {
+    position: relative;
+}
+.navlinks2.show{
+  display: block;
+}
+  .intro {
+    width: 90%;
+    border:none;
+    box-shadow: none;
+  }
+
+  .cards {
+    display: block;
+  }
+  .card {
+    border: none;
+    box-shadow: none;
+    width: 90%;
+    font-size: small;
+    height: auto;
+
+  }
+  .card:hover {
+    transform: none;
+  }
+  #properties {
+    height: 100%;
+    overflow: auto;
+  }
+  .slider-container {
+    width: 100%;
+  }
+  .slide {
+    width: 90%;
+  }
+
+   #agents {
+    position: relative;
+left: 30%;
+    width: 50%;
+    display: block;
+    height: 500px;
+    overflow: auto;
+  }
+  #agents::-webkit-scrollbar {
+    display: none;
+  }
+  .agentholder{
+    position: absolute;
+  } 
+  .agent {
+    width: 90%;
+    text-align: center;
+  }
+  #marketing {
+    display: block;
+    height: auto;
+ 
+  }
+  .house {
+display: none;  
+}
+  .text {
+    width: auto;
+    height: auto;
+    text-align: center;
+  }
+  #services {
+    display: block;
+  }
+  .serv {
+    width: 90%;
+  }
+  .testimony {
+    display: block;
+  }
+  .mid {
+    width: 100%;
+  }
+  #contact {
+    display: block;
+  }
+  .ins {
+    width: 90%;
+  }
+  .address {
+    width: 90%;
+  }
+  .footer {
+    display: block;
+  }
+  .one {
+    display: block;
+  }
+  .moja {
+    width: 90%;
+  }
+  
+}
