@@ -13,6 +13,7 @@ body {
   align-items: center;
   color: white;
   width: auto;
+  position: relative;
 }
 
 /* Navigation Bar */
@@ -23,7 +24,7 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 60px;
-  color: orangered;
+  color: gray;
   width: 100%;
   position: fixed;
   z-index: 1000;
@@ -31,8 +32,11 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: orangered;
+  color: gray;
   padding: 10px;
+}
+.nav a:hover{
+  color: aqua;
 }
 .nav i{
   display: none;
@@ -77,13 +81,13 @@ body {
 .intro {
   width: 60%;
   z-index: 1;
-  border: 2px solid orangered;
+  border: 2px solid gray;
   border-radius: 20px;
-  box-shadow: 2px 2px 10px 2px orangered;
+  box-shadow: 2px 2px 10px 2px gray;
 
 }
 #home h1{
-  color: orangered;
+  color: gray;
   font-weight: 70px;
   font-size: xx-large;
 }
@@ -99,7 +103,7 @@ body {
   margin-bottom: 20px;
 }
 #how h2{
-  color: orangered;
+  color: gray;
   margin: 0px 0  60px 0;
 }
 /* Cards Section */
@@ -114,9 +118,9 @@ body {
   width: 150px;
   height: 200px;
   transition: transform 0.3s;
-  border: 2px solid orangered;
+  border: 2px solid gray;
   border-radius: 20px;
-  box-shadow: 2px 2px 10px 2px orangered;
+  box-shadow: 2px 2px 10px 2px gray;
 
 }
 
@@ -126,7 +130,7 @@ body {
 
 .card i {
   font-size: 30px;
-  color: orangered;
+  color: gray;
 }
 
 /* Properties Section */
@@ -150,12 +154,23 @@ body {
 
 .slider-container {
   overflow-x: auto;
-
   width: auto;
   height: 80%;
   margin-top: 50px;
   display: flex;
   text-align: center;
+}
+@keyframes skk{
+  0%{
+    transform: translateX(0);
+
+  }
+  50%{
+    transform: translateX(-40px);
+  }
+  60%{
+    transform: translateX(0);
+  }
 }
 .slider-container::-webkit-scrollbar{
   display: none;
@@ -167,6 +182,8 @@ body {
 .slide {
   width: 50%;
   margin: 15px;
+animation: skk 5s linear infinite;
+
   border-radius: 20px;
 }
 .slide img {
@@ -265,20 +282,22 @@ justify-content: center;
   text-align: left;
 }
 button{
-  background-color: orangered;
+  background-color: gray;
+  color: white;
   border: none;
   border-radius: 20px;
   padding: 10px;
   margin: 10px;
 }
 .text button {
-  background-color: orangered;
+  background-color: gray;
 }
 
 /* Services Section */
 #services {
   height: auto;
 }
+
 
 .serve {
   display: flex;
@@ -297,9 +316,12 @@ button{
 .serv a,
 .serv i {
   text-decoration: none;
-  color: orangered;
+  color: gray;
 }
+.serv a:hover{
 
+color: aqua;
+text-decoration: underline ;}
 .words {
   margin: -20px 10px 10px;
 }
@@ -347,7 +369,6 @@ button{
   border: none;
   padding: 10px;
   margin: 20px;
-  background-color: #abaaaa;
 }
 .conhold {
   display: flex;
@@ -400,6 +421,13 @@ button{
 }
 .actived.active{
   color:wheat
+}
+#kk{
+  position: fixed;
+  bottom: 10%;
+  left: 90%;
+  color: gray;
+  animation: fadeIn 3s;
 }
 @media screen and (max-width: 768px) {
   #home{
@@ -566,7 +594,6 @@ display: none;
   }
   #contact {
     display: block;
-    height: auto;
   }
   .ins {
     width: 90%;
@@ -585,3 +612,4 @@ display: none;
   }
   
 }
+
