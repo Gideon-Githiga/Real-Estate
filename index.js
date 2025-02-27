@@ -47,3 +47,21 @@ navitem.forEach((item) => {
     this.classList.add("active");
   });
 });
+let heroes = document.querySelectorAll(".hero");
+let navitems = document.querySelectorAll(".navlinks a");
+
+let observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        navitems.forEach((item) => item.classList.remove("active"));
+        document
+          .querySelector(`a[href="#${entry.target.id}"]`)
+          .classList.add("active");
+      }
+    });
+  },
+  { threshold: 0.6 }
+);
+
+heroes.forEach((div) => observer.observe(div));
